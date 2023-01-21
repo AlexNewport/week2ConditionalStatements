@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements JavaScript</title>
+</head>
+<body>
+    <script>
+        let firstNum = prompt("Please enter the first number");
+        if (!(isNaN(firstNum))) {
+            let operator = prompt("Please enter an operator");
+            if (operator === "+" || operator === "-" || operator === "/" || operator === "*") {
+                let secondNum = prompt("Please enter the second number");
+                if (!(isNaN(secondNum))) {
+                    let result;
+                    switch(operator) {
+                        case "+":
+                            result = firstNum + secondNum;
+                            break;
+                        case "-":
+                            result = firstNum - secondNum;
+                            break;
+                        case "*":
+                            result = firstNum * secondNum;
+                            break;
+                        case "/":
+                            result = firstNum / secondNum;
+                            break;
+                        default:
+                            alert("Unknown operator error");
+                    }
+                    alert("The answer is " + result);
+                }
+                else {
+                    alert("Invalid second number");
+                }
+            }
+            else {
+                alert("Invalid operator");
+            }
+        }
+        else {
+            alert("Invalid first number");
+        }
+    </script>
+</body>
+</html>
